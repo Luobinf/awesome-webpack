@@ -1,0 +1,1 @@
+{"version":3,"file":"foo.js","mappings":";;;;;;;;AAAA,IAAIA,CAAC,GAAG,CAAR;AACAC,OAAO,CAACC,GAAR,CAAaF,CAAb","sources":["webpack://awesome-webpack/./src/foo.js"],"sourcesContent":["let a = 2\nconsole.log( a )"],"names":["a","console","log"],"sourceRoot":""}
