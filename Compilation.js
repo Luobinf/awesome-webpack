@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const parser = require('@babel/parser');
+const types = require('@babel/types');
+const traverse = require('@babel/traverse').default;
+const generator = require('@babel/generator').default;
 
 // 当前命令所在的目录
 const baseDir = toUnixPath(process.cwd());
@@ -52,6 +56,16 @@ class Compilation {
             return require(loader)(sourceCode)
         }, moduleSourceCode)
 
+        // 7、找出此模块依赖的模块，递归的进行编译。
+
+        const ast = parser.parse(moduleSourceCode, {
+            sourceType: 'unambiguous',
+            plugins: []
+        })
+        traverse(ast, {
+
+        })
+        
         console.log(moduleSourceCode, 112233)
 
     }
