@@ -25,6 +25,10 @@ function webpack(options = {}) {
     }
 
     // 4. 执行compiler 的 run 方法
+    compiler.run( () => {
+        
+    })
+
     return compiler
 
 }

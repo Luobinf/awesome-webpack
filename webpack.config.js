@@ -9,6 +9,9 @@ module.exports = {
     output: {
 
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             {
