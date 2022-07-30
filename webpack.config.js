@@ -3,6 +3,7 @@ const WebpackDonePlugin = require("./plugins/webpack-done-plugin");
 const path = require("path");
 
 module.exports = {
+  mode: 'development',
   entry: {
     home: "./src/home.js",
     about: "./src/about.js",

@@ -4,7 +4,7 @@ class WebpackRunPlugin {
     }
     apply(compiler) {
         compiler.hooks.run.tap('WebpackRunPlugin', () => {
-            console.log(11)
+            console.log('run:', 11, this.options)
         })
     }
 }

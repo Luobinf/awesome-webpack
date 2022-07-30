@@ -4,7 +4,7 @@ class WebpackDonePlugin {
     }
     apply(compiler) {
         compiler.hooks.done.tap('WebpackDonePlugin', () => {
-            console.log(11, this.options)
+            console.log('done: ', 22, this.options)
         })
     }
 }
