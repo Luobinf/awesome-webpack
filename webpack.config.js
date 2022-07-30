@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     home: "./src/home.js",
     about: "./src/about.js",
+    // other: "./src/other.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
