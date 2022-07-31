@@ -17,11 +17,13 @@ class Compilation {
   }
   build(callback) {
     // 根据入口文件开始构建
-    const { entry } = this.options;
+    let { entry } = this.options;
     // entry 字符串，对象
     console.log(entry, "entry");
     if (typeof entry === "string") {
-      // 特殊处理后续做
+      entry = {
+        main: entry
+      }
     } else {
       for (let entryName in entry) {
         const entryPath = entry[entryName];
@@ -52,7 +54,7 @@ class Compilation {
         chunks: this.chunks,
         modules: this.modules,
         assets: this.assets
-      })
+    })
   }
   buildModule(moduleName, modulePath) {
     modulePath = path.join(currentWorkDirectory, modulePath);

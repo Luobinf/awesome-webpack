@@ -9,8 +9,8 @@ class Compiler {
   constructor(options) {
     this.options = options;
     this.hooks = {
-      run: new SyncHook(),
-      done: new SyncHook(),
+      run: new SyncHook(), // 开始编译钩子
+      done: new SyncHook(), // 结束编译钩子
     };
   }
   run(callback) {
@@ -40,6 +40,7 @@ class Compiler {
     };
     this.compile(onCompiled);
   }
+  //  每次调用表示一次编译
   compile(callback) {
     let compilation = new Compilation(this.options);
     compilation.build(callback);
